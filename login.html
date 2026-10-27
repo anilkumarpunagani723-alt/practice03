@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en-IN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Sign in or create an AutoGear demo account. No login information is saved or sent."
+    >
+    <meta property="og:title" content="Sign in | AutoGear">
+    <link rel="canonical" href="https://www.autogear.in/login.html">
+    <title>Sign in | AutoGear</title>
+    <link rel="icon" href="assets/images/logo.svg">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/account.css">
+    <script defer src="assets/js/main.js"></script>
+    <script defer src="assets/js/login.js"></script>
+  </head>
+  <body>
+    <div id="site-header"></div>
+    <main>
+      <section class="page-hero">
+        <div class="breadcrumb">
+          <a href="index.html">Home</a> / Account
+        </div>
+        <h1 class="page-title">Your AutoGear account</h1>
+        <p>Sign in or create an account to get started.</p>
+      </section>
+      <section class="account-wrap">
+        <div class="account-card">
+          <div class="account-tabs" role="group" aria-label="Account options">
+            <button
+              class="account-tab is-active"
+              type="button"
+              data-account-mode="login"
+              aria-pressed="true"
+            >
+              Sign in
+            </button>
+            <button
+              class="account-tab"
+              type="button"
+              data-account-mode="register"
+              aria-pressed="false"
+            >
+              Create account
+            </button>
+          </div>
+          <form class="account-form" data-account-form="login" method="post" action="login.html">
+            <fieldset disabled>
+              <legend class="sr-only">Sign in</legend>
+              <div class="form-field">
+                <label for="login-email">Email</label>
+                <input
+                  id="login-email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  required
+                >
+              </div>
+              <div class="form-field">
+                <label for="login-password">Password</label>
+                <input
+                  id="login-password"
+                  name="password"
+                  type="password"
+                  autocomplete="current-password"
+                  required
+                >
+              </div>
+              <button class="button button-red account-submit" type="submit">
+                Sign in
+              </button>
+            </fieldset>
+          </form>
+          <form
+            class="account-form"
+            data-account-form="register"
+            method="post"
+            action="login.html"
+            hidden
+          >
+            <fieldset disabled>
+              <legend class="sr-only">Create account</legend>
+              <div class="form-field">
+                <label for="register-name">Name</label>
+                <input
+                  id="register-name"
+                  name="name"
+                  autocomplete="name"
+                  required
+                >
+              </div>
+              <div class="form-field">
+                <label for="register-email">Email</label>
+                <input
+                  id="register-email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  required
+                >
+              </div>
+              <div class="form-field">
+                <label for="register-password">Password</label>
+                <input
+                  id="register-password"
+                  name="password"
+                  type="password"
+                  autocomplete="new-password"
+                  minlength="8"
+                  required
+                >
+                <small>Use at least 8 characters.</small>
+              </div>
+              <button class="button button-red account-submit" type="submit">
+                Create account
+              </button>
+            </fieldset>
+          </form>
+          <p class="account-notice" role="status" aria-live="polite">
+            Demo only: account sign-in is not connected. Do not enter a real
+            password; login details are not sent or saved.
+          </p>
+        </div>
+      </section>
+    </main>
+    <div id="site-footer"></div>
+  </body>
+</html>

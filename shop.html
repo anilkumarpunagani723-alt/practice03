@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en-IN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Browse the AutoGear sample catalogue of car interior, electronics, lighting and care accessories."
+    >
+    <meta property="og:title" content="Shop Car Accessories | AutoGear">
+    <meta
+      property="og:description"
+      content="Browse the AutoGear demo catalogue."
+    >
+    <link rel="canonical" href="https://www.autogear.in/shop.html">
+    <title>Shop Accessories | AutoGear</title>
+    <link rel="icon" href="assets/images/logo.svg">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <script defer src="assets/js/products.js"></script>
+    <script defer src="assets/js/main.js"></script>
+    <script defer src="assets/js/shop.js"></script>
+  </head>
+  <body>
+    <div id="site-header"></div>
+    <main>
+      <section class="page-hero">
+        <div class="breadcrumb">
+          <a href="index.html">Home</a> / Shop
+        </div>
+        <h1 class="page-title">Shop accessories</h1>
+        <p>
+          Explore the demo catalogue. Prices, ratings and product information
+          are sample data.
+        </p>
+      </section>
+      <div class="content-wrap shop-layout">
+        <aside class="filters" aria-label="Product filters">
+          <h2>Filter products</h2>
+          <div class="filter-group">
+            <h3>Category</h3>
+            <div id="category-filters"></div>
+          </div>
+          <div class="filter-group">
+            <h3>Brand</h3>
+            <div id="brand-filters"></div>
+          </div>
+          <div class="filter-group">
+            <h3>Price range</h3>
+            <label for="price-range">
+              Up to <span id="price-label">₹15,000</span>
+            </label>
+            <input
+              type="range"
+              id="price-range"
+              min="500"
+              max="15000"
+              value="15000"
+              step="500"
+            >
+          </div>
+          <button class="button button-dark" id="clear-filters">
+            Clear filters
+          </button>
+        </aside>
+
+        <section class="catalogue">
+          <div class="filter-toolbar">
+            <span id="product-count" aria-live="polite"></span>
+            <div class="toolbar-controls">
+              <label class="sr-only" for="sort-products">Sort products</label>
+              <select id="sort-products">
+                <option value="popular">Most popular</option>
+                <option value="price-low">Price: low to high</option>
+                <option value="price-high">Price: high to low</option>
+                <option value="name">Name: A to Z</option>
+              </select>
+              <button
+                class="view-toggle active"
+                data-view="grid"
+                aria-label="Grid view"
+              >
+                ▦
+              </button>
+              <button
+                class="view-toggle"
+                data-view="list"
+                aria-label="List view"
+              >
+                ☷
+              </button>
+            </div>
+          </div>
+          <div id="product-list" class="product-grid"></div>
+          <div id="empty-products" class="empty-state" hidden>
+            <h2>No products found</h2>
+            <p>Try changing your search or filters.</p>
+          </div>
+          <button
+            id="load-more"
+            class="button button-dark"
+            style="display: block; margin: 30px auto"
+          >
+            Load more
+          </button>
+        </section>
+      </div>
+    </main>
+    <div id="site-footer"></div>
+    <dialog id="quick-view-modal"></dialog>
+  </body>
+</html>

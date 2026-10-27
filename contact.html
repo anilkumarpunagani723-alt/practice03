@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en-IN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Contact AutoGear. Demo contact details and form; no messages are delivered."
+    >
+    <meta property="og:title" content="Contact AutoGear">
+    <link rel="canonical" href="https://www.autogear.in/contact.html">
+    <title>Contact AutoGear</title>
+    <link rel="icon" href="assets/images/logo.svg">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <script defer src="assets/js/main.js"></script>
+    <script defer src="assets/js/contact.js"></script>
+  </head>
+  <body>
+    <div id="site-header"></div>
+    <main>
+      <section class="page-hero">
+        <div class="breadcrumb">
+          <a href="index.html">Home</a> / Contact
+        </div>
+        <h1 class="page-title">Let’s talk</h1>
+        <p>Contact information below is placeholder content for this demo.</p>
+      </section>
+      <section class="content-wrap">
+        <div class="checkout-layout">
+          <form
+            class="demo-form"
+            data-message="Demo only: your message was not sent. Connect a backend or email service to receive enquiries."
+          >
+            <div class="form-grid">
+              <div class="form-field">
+                <label for="contact-name">Name</label>
+                <input
+                  id="contact-name"
+                  name="name"
+                  autocomplete="name"
+                  required
+                >
+              </div>
+              <div class="form-field">
+                <label for="contact-email">Email</label>
+                <input
+                  id="contact-email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  required
+                >
+              </div>
+              <div class="form-field">
+                <label for="contact-phone">Phone</label>
+                <input
+                  id="contact-phone"
+                  name="phone"
+                  type="tel"
+                  autocomplete="tel"
+                  pattern="[0-9+() -]{7,20}"
+                  title="Enter a valid phone number"
+                >
+              </div>
+              <div class="form-field full">
+                <label for="contact-message">Message</label>
+                <textarea
+                  id="contact-message"
+                  name="message"
+                  required
+                ></textarea>
+              </div>
+              <div class="form-field full">
+                <button class="button button-red" type="submit">
+                  Send message
+                </button>
+                <p class="form-notice" aria-live="polite"></p>
+              </div>
+            </div>
+          </form>
+          <aside class="summary-card">
+            <h2>Business details</h2>
+            <p>
+              <strong>Email</strong><br>
+              Business email to be added
+            </p>
+            <p>
+              <strong>Phone</strong><br>
+              Business phone to be added
+            </p>
+            <p>
+              <strong>Location</strong><br>
+              Business address to be added
+            </p>
+            <p>
+              <strong>WhatsApp</strong><br>
+              Business WhatsApp number to be configured before launch
+            </p>
+            <p class="notice">
+              Form submissions are not delivered until a backend or email
+              service is connected.
+            </p>
+          </aside>
+        </div>
+      </section>
+    </main>
+    <div id="site-footer"></div>
+  </body>
+</html>
